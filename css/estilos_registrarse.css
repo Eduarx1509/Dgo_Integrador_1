@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7; /* Fondo más suave */
+    font-family: 'Nunito', sans-serif;
+}
+
+.container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 75%; /* Reduce la altura para que sea más compacto */
+    max-width: 1100px; /* Reduzca el ancho para centrarlo mejor */
+    overflow: hidden; /* Oculta el desbordamiento si es necesario */
+}
+
+/* Parte Izquierda */
+.information {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    text-align: center;
+    background-color: red;
+    /*background: url('./imagenes/restaurant-image.jpg') no-repeat center center;*/
+    /*background-size: cover;  Imagen de fondo */
+}
+
+.info-childs {
+    width: 80%; /* Reduzca el ancho para centrar mejor el contenido */
+    color: white;
+}
+
+.info-childs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.info-childs p {
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    margin-bottom: 20px;
+}
+
+.info-childs img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Parte Derecha */
+.form-information {
+    display: flex;
+    justify-content: center;
+    width: 50%; /* Cambie el ancho al 50% para que coincida con la parte izquierda */
+    background: #ffffff; /* Fondo blanco */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-childs {
+    width: 80%; /* Reduzca el ancho para centrar mejor el contenido */
+}
+
+.form-information-childs h2 {
+    color: #f81e42; /* Color de texto destacado */
+    font-size: 2.5rem; /* Haga que el título sea más grande */
+    text-align: center;
+    margin-top: 20px;
+}
+.card{
+    display: flex;
+    gap: 10px;
+}
+
+.card.i{
+    display: flex;
+}
+
+.formulario {
+    margin: 20px 0;
+}
+
+.formulario label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #f7f7f7; /* Fondo más suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.formulario p {
+    color: #f81e42;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.formulario label input {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+}
+
+.formulario label i {
+    color: #a7a7a7;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario input[type="submit"] {
+    background-color: #f81e42;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #ff6200;
+}
+
+/* Estilo de validaciones */
+.alert {
+    padding: 1em;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.alert.error {
+    background: #F2DEDE;
+    border: 1px solid #f81e42;
+    color: #f81e42;
+}
+
+.alert.success {
+    background: #4CAF50;
+    border: 1px solid #0ba45b;
+    color: #fff;
+}
+
+/* Código responsive */
+@media screen and (max-width: 700px) {
+    .container-form {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .information, .form-information {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        border-radius: 0; /* Sin redondeo en las esquinas */
+    }
+
+    .info-childs img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.btn-regresar{
+    background-color: #f81e42;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-regresar:hover{
+    background-color: #ff6200;
+}
+

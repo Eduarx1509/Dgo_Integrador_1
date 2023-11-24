@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Sora&display=swap');
+@import url('https://fonts.cdnfonts.com/css/malvinas');
+@import url('https://fonts.cdnfonts.com/css/euro-caps');
+@import url('https://fonts.cdnfonts.com/css/tt-marxiana-trial');
+@import url('https://fonts.cdnfonts.com/css/hendrix-bubble');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+                
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'sans-serif';
+}
+
+body {
+    background-color: #f9f9f9;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body,
+html {
+    height: 100%;
+    
+}
+
+body:focus {
+    overflow: auto;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px #ccc solid;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+    height: 45px;
+    margin-left: 10vw;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 10vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+nav li {
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.subrayado {
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: #e92500;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.subrayado:hover {
+    color: #e92500;
+}
+
+.subrayado:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    backface-visibility: hidden;
+}
+
+
+.buscar {
+    margin: 0 5vw;
+    display: flex;
+}
+
+.buscar input[type="text"] {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0px 0px 10px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+    border-right: none;
+}
+
+.buscar button {
+    width: 50px;
+    background: #e92500;
+    color: #fff;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buscar button i {
+    color: white;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.contenedor {
+    margin-top: 75px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-contenedor {
+    display: flex;
+}
+
+.contenido-slider {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.contenido-slider>img {
+    width: 100%;
+}
+
+.espacio{
+    margin: 2vw 5vw 0 5vw;
+    font-size: 40px;
+}
+
+.contenido{
+    display: flex;
+}
+
+.menu {
+    background-color: #fff;
+    margin: 2vw 5vw;
+    padding: 25px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.titulo-menu {
+    font-size: 20px;
+    color: #777;
+}
+
+.subtitulo-menu {
+    font-size: 32px;
+}
+
+.contenido ul{
+    list-style: none;
+}
+
+.contenido a{
+    font-size: 18px;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+hr {
+    border: none; 
+    border-top: 1px solid #ccc; 
+    margin: 10px 0; 
+}
+
+footer{
+    background-color: #e92500;
+    color: #fff;
+}
+
+.espacio-footer{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10vh 0;
+}
+
+.footer-contenido{
+    width: 15vw;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.contenido-restaurante{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 1000px;
+    margin-top: 100px;
+}
+
+.restaurante{
+    justify-content: space-between;
+    margin: 10px;
+    text-align: center; 
+    background: #fff;
+    border-radius: 20px;
+    border: 1px #dfdfdf solid;
+    color: #000000;
+    transition: .5s;
+}
+
+.restaurante:hover{
+    transform: translateY(-10px);
+}
+
+.restaurante h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.restaurante img{
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.publicidad{
+    width: 20vw;
+    margin: 2vw ;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+.slider{
+    width: 100vw;
+    height: 42px;
+    overflow: hidden;
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(800px * 6);
+}
+
+.slider .slide{
+    width: 800px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-800px * 3));
+        transform: translateX(calc(-800px * 3));
+    }
+}
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease; /* Agrega una transición suave a la opacidad */
+}
+
+/* Estilo para el contenido del modal */
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega transiciones suaves a la opacidad y la posición */
+}
+
+/* Estilo para el botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Estilo para mostrar el modal */
+.modal.mostrar {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilo para mostrar el contenido del modal */
+.modal.mostrar .modal-contenido {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Escala 1 para mostrar el contenido */
+}
+
+
+
+
+
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.logo{
+    float: left;
+    line-height: 65px;
+}
+.menus{
+    float: right;
+    line-height: 65px;
+}
+.menus ul{
+    display: flex;
+    list-style: none;
+}
+.menus a{
+    display: block;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #6d6d6d;
+    transition: all 500ms ease;
+}
+
+.menus .submenus{
+    background: #fff;
+    box-shadow: 3px 10px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+.menus .submenus li a{
+    line-height: 50px;
+}
+.menus ul li a:hover + ul, .menus .submenus:hover{
+    display: block;
+}
+/* Agrega estos estilos al final de tu archivo de estilos CSS (estilos.css) */
+
+/* Estilos para los botones de +, - y eliminar en el carrito */
+.btn-eliminar {
+    background-color: #3498db; /* Color de fondo principal */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+    font-size: 12px;
+    margin-left: 2px;
+}
+.boton-item {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.boton-item:hover {
+    background-color: #f44336;
+}
+
+.btn-incrementar{
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+    margin-left: 2px
+} 
+.btn-decrementar{
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+    margin-left: 2px
+} .btn-eliminar {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+}
+
+.btn-incrementar:hover, .btn-decrementar:hover {
+    background-color: #d32f2f;
+    font-size: 10px;
+}
+.btn-eliminar:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el mouse */
+}
+/* Estilos para el modal del carrito */
+
+
+
+
+.modal-contenido {
+    max-width: 600px; /* Ajusta el tamaño máximo del modal según tus necesidades */
+    margin: 0 auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilos adicionales según tu diseño */
+.producto-carrito {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.total-cuadro {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-texto {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.total-precio {
+    font-weight: bold;
+    color: #f44336;
+    display: inline-block;
+}
+
+.limpiar-carrito-btn, button[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.limpiar-carrito-btn:hover, button[type="submit"]:hover {
+    background-color: #fa1404;
+}
+#verCarritoBtn {
+    cursor: pointer; /* Hace que el cursor cambie al pasar sobre la imagen */
+    margin-left: 150px;
+}
+.btn-incrementar,
+.btn-decrementar,
+.btn-eliminar {
+    background-color: rgb(175, 92, 76);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-incrementar:hover,
+.btn-decrementar:hover,
+.btn-eliminar:hover {
+    background-color: #45a049;
+}

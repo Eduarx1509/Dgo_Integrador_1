@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+#carritoContenedor {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h3 {
+    color: #d9534f; /* Rojo */
+}
+
+.producto-carrito {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botones-container {
+    display: flex;
+    align-items: center;
+}
+
+.boton-form {
+    margin-right: 10px;
+}
+
+.btn-incrementar,
+.btn-decrementar,
+.btn-eliminar {
+    background-color: #d9534f; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Ajusta el tamaño del botón */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total-cuadro {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-texto {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.total-precio {
+    color: #d9534f; /* Rojo */
+    font-size: 1.2em;
+}
+
+.limpiar-carrito-btn,
+.boton-item {
+    background-color: #d9534f; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+a {
+    color: #d9534f; /* Rojo */
+    text-decoration: none;
+}

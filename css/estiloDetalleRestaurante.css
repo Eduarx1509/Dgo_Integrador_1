@@ -1,0 +1,220 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero p {
+    margin: 20px 200px 0;
+    font-size: 1.2rem;
+}
+
+.about,
+.services {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.about {
+    margin: 0 200px;
+    display: flex;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin: 0 0 2rem;
+}
+
+.about p {
+    margin: 100px;
+    font-size: 2rem;
+}
+
+.about img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.services {
+    text-align: initial;
+    margin: 0 200px;
+}
+
+.misionvision .services {
+    margin: 0;
+    margin-right: 200px;
+}
+
+.services-space {
+    align-items: center;
+    display: flex;
+}
+
+.services-space li {
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.services-space li {
+    margin: 1rem 0;
+}
+
+.ruc{
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.img2 {
+    max-width: 600px;
+    /* Hace que la imagen sea responsiva y no exceda el ancho del contenedor */
+    height: 600px;
+    /* Mantiene la proporción de la imagen al cambiar el ancho */
+
+    /* Añade bordes redondeados */
+    border-radius: 8px;
+
+    /* Añade una sombra sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*:::Boton-Modal:::*/
+.boton-modal {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.boton-modal label {
+    padding: 10px 15px;
+    background-color: red;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal label:hover {
+    background-color: white;
+    color: red;
+}
+
+/*:::Fin Boton-Modal:::*/
+
+/*:::Ventana Modal:::*/
+#btn-modal {
+    display: none;
+}
+
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-modal:checked~.container-modal {
+    display: flex;
+}
+
+.content-modal {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.content-modal h2 {
+    margin-bottom: 15px;
+}
+
+.content-modal p {
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal .btn-cerrar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: white;
+    color: red;
+}
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width:800px) {
+    .content-modal {
+        width: 90%;
+    }
+}
+
+/*:::Fin Ventana Modal:::*/

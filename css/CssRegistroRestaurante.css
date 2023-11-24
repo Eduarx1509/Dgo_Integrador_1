@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to top, #ffe7e7, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body:focus {
+    overflow: auto;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px #ccc solid;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+    height: 45px;
+    margin-left: 10vw;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 10vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+nav li {
+    margin-right: 40px;
+    font-size: 20px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.subrayado {
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: #e92500;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.subrayado:hover {
+    color: #ff9500;
+}
+
+.subrayado:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    backface-visibility: hidden;
+    color: red;
+}
+
+
+.buscar {
+    margin: 0 5vw;
+    display: flex;
+}
+
+.buscar input[type="text"] {
+    width: 30vw;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0px 0px 10px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+    border-right: none;
+}
+
+.buscar button {
+    width: 50px;
+    background: #e92500;
+    color: #fff;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buscar button i {
+    color: white;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.logo {
+    position: absolute;
+    margin-bottom: 50vh;
+    z-index: -1;
+    margin-right: 50vw;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.espacio-contenedor{
+    margin: auto;
+    margin-top: 50vh;
+    margin-left: 30vw;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor {
+    font-family: 'Montserrat', sans-serif;
+    transform: scale(1.5);
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    z-index: 50;
+}
+
+.contenedor p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.contenedor span {
+    font-size: 12px;
+}
+
+.contenedor a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.subrayado {
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: #e92500;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.subrayado:hover {
+    color: #e92500;
+}
+
+.subrayado:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    backface-visibility: hidden;
+}
+
+.contenedor button {
+    background-color: #e92500;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.contenedor button:hover {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    backface-visibility: hidden;
+}
+
+.contenedor button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.contenedor form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.contenedor input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.input-grupo {
+    display: flex;
+}
+
+.input-grupo input {
+    flex: 1;
+}
+
+.form-contenedor {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.iniciar-sesion {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.contenedor.activo .iniciar-sesion {
+    transform: translateX(100%);
+}
+
+.crear-cuenta {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.contenedor.activo .crear-cuenta {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.redes-sociales {
+    margin: 20px 0;
+}
+
+.redes-sociales a {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    margin: 0 3px;
+    height: 40px;
+}
+
+.redes-sociales i {
+    transition: .25s;
+}
+
+.redes-sociales a:hover i {
+    transform: scale(1.2);
+    backface-visibility: hidden;
+    color: orangered;
+}
+
+.lateral-contenedor {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.contenedor.activo .lateral-contenedor {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.lateral {
+    height: 100%;
+    background: linear-gradient(to right, #ff0000, #993333);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.contenedor.activo .lateral {
+    transform: translateX(50%);
+}
+
+.lateral-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.lateral-izquierdo {
+    transform: translateX(-200%);
+}
+
+.contenedor.activo .lateral-izquierdo {
+    transform: translateX(0);
+}
+
+.lateral-derecho {
+    right: 0;
+    transform: translateX(0);
+}
+
+.contenedor.activo .lateral-derecho {
+    transform: translateX(200%);
+}
+
+footer{
+    background-color: #e92500;
+    color: #fff;
+}
+
+.espacio-footer{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10vh 0;
+}
+
+.footer-contenido{
+    width: 15vw;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}

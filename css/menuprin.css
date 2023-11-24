@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imagenes/Libro_Fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -1;
+    height: 200vh;
+}
+
+.header-contenedor{
+    margin: 1vw;
+    background: white;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    height: 8vh;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-contenedor .logo{
+    margin: 1vw;
+    justify-content: left;
+}
+
+.header-contenedor .buscar {
+    margin: 1vw 2vw;
+    width: 60vw;
+}
+
+.buscarLibro{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+}
+
+.custom-input {
+    position: relative;
+}
+
+::placeholder{
+    font-size: 13px;
+    color: #888;
+    padding: 5px;
+}
+
+.header-contenedor .buscarLibro{
+    background: rgba(51, 102, 153, 0.10);
+    border: 3px solid #369;
+    padding: 15px 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.header-contenedor .buscarBoton{
+    text-align: center;
+    margin: 1vw;
+
+}
+
+.header-contenedor button{
+    background-color: #ff9900;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 45px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.header-contenedor button:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    backface-visibility: hidden;
+}
+
+.header-contenedor .sesion{
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    display: flex;
+}
+
+.header-contenedor a{
+    text-align: center;
+    background-color: #ff9900;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+    text-decoration: none;
+    margin-bottom: 1px;
+}
+
+.header-contenedor a:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    backface-visibility: hidden;
+}
+
+.contenido-lateral .bienvenido-caja{
+    margin-top: 2vh;
+    text-align: center;
+    padding: 2vh 1vw;
+    background-color: rgba(225, 210, 194, 0.7);
+    width: 300px;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.contenido-lateral .navegacion-lateral{
+    margin-top: 2vh;
+    padding: 2vh 1vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 300px;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.subrayado {
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: red;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.subrayado:hover {
+    color: red;
+}
+
+.subrayado:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    backface-visibility: hidden;
+}
+
+.contenedor-principal{
+    display: flex;
+    min-height: 100vh; /* Mínimo 100% de la altura de la ventana gráfica */
+    align-items: stretch; /* Establece una altura mínima igual a la ventana gráfica */
+
+}
+
+.contenido-lateral{
+    width: 300px;
+    flex: 0 0 300px;
+}
+
+.navegacion-libros{
+    padding: 2vw;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 2vh 5vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.navegacion-libros button{
+    background-color: #369;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.navegacion-libros button:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    backface-visibility: hidden;
+}
+
+#tablares{
+    align-items: center;
+    text-align: center;
+    margin: 2vw;
+    background: white;
+    padding: 2vw;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.hover-effect {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    padding: 1vw;
+    border-radius: 20px;
+    z-index: 1;
+    transition: background-color 0.3s;
+    width: 240px;
+}
+
+#tablares td:hover .hover-effect {
+    background-color: rgba(51, 102, 153, 0.5);
+
+}
+
+#tablares td {
+    width: 300px;
+    height: 80px;
+    margin: 20px;
+    position: relative;
+}
+
+#tablares td a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+#tablares td a img {
+    max-height: 300px;
+}
+
+#tablares td .hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    padding: 1vw;
+    border-radius: 20px;
+    z-index: 1;
+    transition: background-color 0.3s;
+    width: 240px;
+}
+
+#tablares td span {
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: z-index 0.3s;
+}
+
+#tablares td:hover span {
+    z-index: 2;
+}

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.contenedor {
+    background-color: white;
+    width: 700px;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
+h1{
+    text-align: center;
+}
+  
+input[type=text] {
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+  
+label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+}
+  
+.iconos-contenedor {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 48px;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+  
+.btn:hover {
+    background-color: #FF8D33;
+}
+  
+/*Responsive*/
+@media (max-width: 800px) {
+    body {
+      flex-direction: column-reverse;
+    }
+    .contenedor {
+      margin-bottom: 20px;
+    }
+}
+.modal-contenido button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón de cerrar el modal */
+.modal-contenido .cerrar {
+    color: #aaa; /* Color del texto de cerrar */
+    float: right; /* Alinea el botón a la derecha */
+    font-size: 20px; /* Tamaño del texto */
+}
+
+/* Estilos para el botón de resumen de compra */
+.modal-contenido button.resumen-compra {
+    background-color: #2196F3; /* Cambia el color de fondo */
+}
+
+/* Estilos para el botón de limpiar carrito */
+.modal-contenido button.limpiar-carrito-btn {
+    background-color: #f44336; /* Cambia el color de fondo */
+}

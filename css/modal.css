@@ -1,0 +1,309 @@
+/* Estilo para el modal */
+.modal {
+    display: none; /* Por defecto, el modal no se muestra */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilo para el contenido del modal */
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Ajusta el ancho máximo según tus preferencias */
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo para el botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000000;
+}
+.boton-item {
+    display: block;
+    width: 100%;
+    margin: 10px auto; /* Ajusta el margen según tus preferencias */
+    border: none;
+    background-color: #e53c3c; /* Cambia el color de fondo según tus preferencias */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace si se usa dentro del botón */
+
+    /* Agrega sombra al botón al pasar el mouse sobre él */
+    transition: background-color 0.3s ease;
+}
+.boton-item:hover {
+    background-color: #340202; /* Cambia el color al pasar el mouse */
+}
+.carrito-imagen {
+    max-width: 50px; /* Ajusta el tamaño máximo según tus preferencias */
+    max-height: 50px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto del carrito */
+}
+.modal-contenido ul {
+    list-style: none;
+    padding: 0;
+}
+.modal-contenido ul li {
+    margin-bottom: 10px;
+}
+.limpiar-carrito-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px; /* Ajusta el padding según tus preferencias */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.resumen-compra-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.limpiar-carrito-btn:hover,
+.resumen-compra-btn:hover {
+    background-color: #828080;
+}
+.total-cuadro {
+    background-color: #fff7f7;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: inline-block; /* Hace que el cuadro sea en línea para que el botón esté en la misma línea */
+}
+
+.total-texto {
+    font-weight: bold;
+}
+.total-precio {
+    color: rgb(11, 11, 11);
+    font-weight: bold;
+}
+/* Agrega estilos para separar los productos en el carrito */
+.productos-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+.producto-carrito {
+    border-bottom: 1px solid #ccc; /* Línea casi imperceptible entre productos */
+    padding-bottom: 8px; /* Espacio entre el contenido y la línea */
+    margin-bottom: 8px; /* Espacio entre productos */
+}
+
+.producto-carrito:last-child {
+    border-bottom: none; /* Elimina la línea en el último producto */
+}
+
+.nombre {
+    display: inline-block;
+    width: 70%; /* Ajusta según sea necesario */
+}
+
+.precio {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right; /* Alinea el precio a la derecha */
+}
+/* Agrega un margen inferior al título "Productos del carrito" */
+h3 {
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+/* Agrega estilos para separar los productos en el carrito */
+.productos-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+.producto-carrito {
+    border-bottom: 1px solid #ccc; /* Línea casi imperceptible entre productos */
+    padding-bottom: 8px; /* Espacio entre el contenido y la línea */
+    margin-bottom: 8px; /* Espacio entre productos */
+}
+
+.producto-carrito:last-child {
+    border-bottom: none; /* Elimina la línea en el último producto */
+}
+
+.nombre {
+    display: inline-block;
+    width: 70%; /* Ajusta según sea necesario */
+}
+
+.precio {
+    display: inline-block;
+    width: 30%; /* Ajusta según sea necesario */
+    text-align: right; /* Alinea el precio a la derecha */
+}
+/* Agrega estos estilos al final de tu archivo de estilos CSS (estilos.css) */
+
+/* Estilos para los botones de +, - y eliminar en el carrito */
+.btn-eliminar {
+    background-color: #3498db; /* Color de fondo principal */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+    font-size: 12px;
+    margin-left: 2px;
+}
+.boton-item {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.boton-item:hover {
+    background-color: #f44336;
+}
+
+.btn-incrementar{
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+    margin-left: 2px
+} 
+.btn-decrementar{
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+    margin-left: 2px
+} .btn-eliminar {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+    font-size: 12px;
+}
+
+.btn-incrementar:hover, .btn-decrementar:hover {
+    background-color: #d32f2f;
+    font-size: 10px;
+}
+.btn-eliminar:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el mouse */
+}
+/* Estilos para el modal del carrito */
+
+
+
+
+.modal-contenido {
+    max-width: 600px; /* Ajusta el tamaño máximo del modal según tus necesidades */
+    margin: 0 auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilos adicionales según tu diseño */
+.producto-carrito {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.total-cuadro {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-texto {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.total-precio {
+    font-weight: bold;
+    color: #f44336;
+    display: inline-block;
+}
+
+.limpiar-carrito-btn, button[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.limpiar-carrito-btn:hover, button[type="submit"]:hover {
+    background-color: #fa1404;
+}
+#verCarritoBtn {
+    cursor: pointer; /* Hace que el cursor cambie al pasar sobre la imagen */
+    margin-left: 150px;
+}
+.btn-incrementar,
+.btn-decrementar,
+.btn-eliminar {
+    background-color: rgb(175, 92, 76);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-incrementar:hover,
+.btn-decrementar:hover,
+.btn-eliminar:hover {
+    background-color: #45a049;
+}
