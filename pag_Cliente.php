@@ -261,7 +261,7 @@ while ($data = $consulta_info->fetch_assoc()) {
                 <a href="" class="footer-texto">Te atendemos las 24 horas</a><br>
                 <a href="">Escríbenos</a><br>
                 <a href="">Chatea con nosotros</a><br>
-                <a href="">Te atendemos las 24 horas</a><br>
+                <a href="">Te atendemos todo el día</a><br>
             </div>
         </div>
     </footer>
